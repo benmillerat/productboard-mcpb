@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "description": "Connect Claude to your Productboard workspace. Browse features, notes, products, releases, companies, and verify API access.",
   "author": {
-    "name": "Ben & Steve"
+    "name": "Ben Miller & Steve"
   },
   "server": {
     "type": "node",
