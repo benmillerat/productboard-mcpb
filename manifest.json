@@ -1,0 +1,98 @@
+{
+  "manifest_version": "0.3",
+  "name": "productboard-connector",
+  "display_name": "Productboard Connector",
+  "version": "1.0.0",
+  "description": "Connect Claude to your Productboard workspace. Browse features, notes, products, releases, companies, and verify API access.",
+  "author": {
+    "name": "Ben & Steve"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "PRODUCTBOARD_API_TOKEN": "${user_config.api_token}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "pb_features_list",
+      "description": "List Productboard features with optional filters and pagination"
+    },
+    {
+      "name": "pb_feature_get",
+      "description": "Get details for a Productboard feature by ID"
+    },
+    {
+      "name": "pb_feature_create",
+      "description": "Create a Productboard feature"
+    },
+    {
+      "name": "pb_feature_update",
+      "description": "Update a Productboard feature"
+    },
+    {
+      "name": "pb_notes_list",
+      "description": "List Productboard notes with optional filters and pagination"
+    },
+    {
+      "name": "pb_note_create",
+      "description": "Create a Productboard note"
+    },
+    {
+      "name": "pb_products_list",
+      "description": "List Productboard products"
+    },
+    {
+      "name": "pb_releases_list",
+      "description": "List Productboard releases"
+    },
+    {
+      "name": "pb_release_get",
+      "description": "Get details for a Productboard release by ID"
+    },
+    {
+      "name": "pb_companies_list",
+      "description": "List Productboard companies"
+    },
+    {
+      "name": "pb_user_current",
+      "description": "Verify Productboard connectivity by fetching current user info"
+    }
+  ],
+  "user_config": {
+    "api_token": {
+      "type": "string",
+      "title": "Productboard API Token",
+      "description": "Personal access token from Productboard (Settings → Integrations → Public API)",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "keywords": [
+    "productboard",
+    "product-management",
+    "features",
+    "feedback",
+    "releases"
+  ],
+  "license": "MIT",
+  "privacy_policies": [
+    "https://www.productboard.com/privacy-policy/"
+  ]
+}
