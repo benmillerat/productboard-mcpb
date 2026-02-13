@@ -2,8 +2,8 @@
   "manifest_version": "0.3",
   "name": "productboard-connector",
   "display_name": "Productboard Connector",
-  "version": "1.0.0",
-  "description": "Connect Claude to your Productboard workspace. Browse features, notes, products, releases, companies, and verify API access.",
+  "version": "2.0.0",
+  "description": "Connect Claude to your Productboard workspace with 40 tools across features, notes, objectives, key results, initiatives, releases, users, custom fields, and more.",
   "author": {
     "name": "Ben Miller & Steve"
   },
@@ -35,19 +35,91 @@
     },
     {
       "name": "pb_feature_update",
-      "description": "Update a Productboard feature"
+      "description": "Update a Productboard feature by ID"
+    },
+    {
+      "name": "pb_feature_delete",
+      "description": "Delete a Productboard feature by ID"
+    },
+    {
+      "name": "pb_feature_statuses",
+      "description": "List available Productboard feature statuses"
+    },
+    {
+      "name": "pb_components_list",
+      "description": "List Productboard components"
     },
     {
       "name": "pb_notes_list",
       "description": "List Productboard notes with optional filters and pagination"
     },
     {
+      "name": "pb_note_get",
+      "description": "Get details for a Productboard note by ID"
+    },
+    {
       "name": "pb_note_create",
       "description": "Create a Productboard note"
     },
     {
+      "name": "pb_note_update",
+      "description": "Update a Productboard note by ID"
+    },
+    {
+      "name": "pb_note_link",
+      "description": "Link a note to an entity (feature, company, etc.)"
+    },
+    {
       "name": "pb_products_list",
       "description": "List Productboard products"
+    },
+    {
+      "name": "pb_objectives_list",
+      "description": "List Productboard objectives with optional filters"
+    },
+    {
+      "name": "pb_objective_get",
+      "description": "Get details for a Productboard objective by ID"
+    },
+    {
+      "name": "pb_objective_create",
+      "description": "Create a Productboard objective"
+    },
+    {
+      "name": "pb_objective_update",
+      "description": "Update a Productboard objective by ID"
+    },
+    {
+      "name": "pb_key_results_list",
+      "description": "List Productboard key results with optional filters"
+    },
+    {
+      "name": "pb_key_result_get",
+      "description": "Get details for a Productboard key result by ID"
+    },
+    {
+      "name": "pb_key_result_create",
+      "description": "Create a Productboard key result"
+    },
+    {
+      "name": "pb_key_result_update",
+      "description": "Update a Productboard key result by ID"
+    },
+    {
+      "name": "pb_initiatives_list",
+      "description": "List Productboard initiatives with optional filters"
+    },
+    {
+      "name": "pb_initiative_get",
+      "description": "Get details for a Productboard initiative by ID"
+    },
+    {
+      "name": "pb_initiative_create",
+      "description": "Create a Productboard initiative"
+    },
+    {
+      "name": "pb_initiative_update",
+      "description": "Update a Productboard initiative by ID"
     },
     {
       "name": "pb_releases_list",
@@ -58,19 +130,63 @@
       "description": "Get details for a Productboard release by ID"
     },
     {
+      "name": "pb_release_create",
+      "description": "Create a Productboard release"
+    },
+    {
+      "name": "pb_release_update",
+      "description": "Update a Productboard release by ID"
+    },
+    {
+      "name": "pb_release_groups_list",
+      "description": "List Productboard release groups"
+    },
+    {
+      "name": "pb_feature_release_list",
+      "description": "List Productboard feature-release assignments"
+    },
+    {
+      "name": "pb_feature_release_assign",
+      "description": "Assign or unassign a feature to a release"
+    },
+    {
+      "name": "pb_feature_objectives",
+      "description": "List objectives linked to a feature"
+    },
+    {
+      "name": "pb_feature_link_objective",
+      "description": "Link a feature to an objective"
+    },
+    {
+      "name": "pb_feature_link_initiative",
+      "description": "Link a feature to an initiative"
+    },
+    {
       "name": "pb_companies_list",
       "description": "List Productboard companies"
     },
     {
+      "name": "pb_users_list",
+      "description": "List Productboard users"
+    },
+    {
+      "name": "pb_custom_fields_list",
+      "description": "List custom fields for hierarchy entities"
+    },
+    {
+      "name": "pb_custom_field_value_get",
+      "description": "Get the value of a custom field for a hierarchy entity"
+    },
+    {
       "name": "pb_user_current",
-      "description": "Verify Productboard connectivity by fetching current user info"
+      "description": "Verify Productboard connection by fetching the current user"
     }
   ],
   "user_config": {
     "api_token": {
       "type": "string",
       "title": "Productboard API Token",
-      "description": "Personal access token from Productboard (Settings → Integrations → Public API)",
+      "description": "Personal access token from Productboard (Settings \u2192 Integrations \u2192 Public API)",
       "sensitive": true,
       "required": true
     }
