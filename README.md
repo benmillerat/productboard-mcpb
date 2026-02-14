@@ -19,20 +19,70 @@ A one-click [MCP Bundle](https://github.com/modelcontextprotocol/mcpb) (.mcpb) t
 
 Requires Productboard Pro plan or higher.
 
-## Tools
+## Tools (40)
 
+### Features
 | Tool | Description |
 |---|---|
-| `pb_features_list` | List and filter features |
-| `pb_feature_get` | Get feature details |
+| `pb_features_list` | List features with optional filters and pagination |
+| `pb_feature_get` | Get feature details by ID |
 | `pb_feature_create` | Create a feature |
-| `pb_feature_update` | Update a feature |
-| `pb_notes_list` | List customer feedback notes |
-| `pb_note_create` | Create a feedback note |
-| `pb_products_list` | List products and components |
+| `pb_feature_update` | Update a feature by ID |
+| `pb_feature_delete` | Delete a feature by ID |
+| `pb_feature_statuses` | List available feature statuses |
+| `pb_feature_objectives` | List objectives linked to a feature |
+| `pb_feature_link_objective` | Link a feature to an objective |
+| `pb_feature_link_initiative` | Link a feature to an initiative |
+| `pb_feature_release_list` | List feature-release assignments |
+| `pb_feature_release_assign` | Assign or unassign a feature to a release |
+
+### Notes (Customer Feedback)
+| Tool | Description |
+|---|---|
+| `pb_notes_list` | List notes with optional filters and pagination |
+| `pb_note_get` | Get note details by ID |
+| `pb_note_create` | Create a note |
+| `pb_note_update` | Update a note by ID |
+| `pb_note_link` | Link a note to an entity (feature, company, etc.) |
+
+### Objectives & Key Results
+| Tool | Description |
+|---|---|
+| `pb_objectives_list` | List objectives with optional filters |
+| `pb_objective_get` | Get objective details by ID |
+| `pb_objective_create` | Create an objective |
+| `pb_objective_update` | Update an objective by ID |
+| `pb_key_results_list` | List key results with optional filters |
+| `pb_key_result_get` | Get key result details by ID |
+| `pb_key_result_create` | Create a key result |
+| `pb_key_result_update` | Update a key result by ID |
+
+### Initiatives
+| Tool | Description |
+|---|---|
+| `pb_initiatives_list` | List initiatives with optional filters |
+| `pb_initiative_get` | Get initiative details by ID |
+| `pb_initiative_create` | Create an initiative |
+| `pb_initiative_update` | Update an initiative by ID |
+
+### Releases
+| Tool | Description |
+|---|---|
 | `pb_releases_list` | List releases |
-| `pb_release_get` | Get release details |
+| `pb_release_get` | Get release details by ID |
+| `pb_release_create` | Create a release |
+| `pb_release_update` | Update a release by ID |
+| `pb_release_groups_list` | List release groups |
+
+### Organization
+| Tool | Description |
+|---|---|
+| `pb_products_list` | List products |
+| `pb_components_list` | List components |
 | `pb_companies_list` | List companies |
+| `pb_users_list` | List users |
+| `pb_custom_fields_list` | List custom fields for hierarchy entities |
+| `pb_custom_field_value_get` | Get custom field value for a hierarchy entity |
 | `pb_user_current` | Verify API connection |
 
 ## Build from Source
